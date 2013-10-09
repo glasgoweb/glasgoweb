@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circles</title>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		@font-face {
+		    font-family: 'Social';
+		    src: url('fonts/socialico-webfont.eot');
+		    src: url('fonts/socialico-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('fonts/socialico-webfont.woff') format('woff'),
+		         url('fonts/socialico-webfont.ttf') format('truetype'),
+		         url('fonts/socialico-webfont.svg#socialicoregular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		body {
+			padding:100px;
+		}
+
+		.member {
+			border-radius:50%;
+			height:250px;
+			width:250px;
+			background:#44606e;
+			position:relative;
+			font-family:'Montserrat', sans-serif;
+			background:#fff;
+			border:1px solid #DDD;
+		}
+
+		.member > * {
+			position:absolute;
+		}
+
+		.member img {
+			border-radius:50%;
+			z-index:1;
+		}
+
+		.member .name,
+		.member .position,
+		.member .info,
+		.member .overlay,
+		.member .social {
+			transition:all 0.3s;
+			-moz-transition:all 0.3s;
+			-webkit-transition:all 0.3s;
+			-ms-transition:all 0.3s;
+			-o-transition:all 0.3s;
+			width:100%;
+			left:0;
+			opacity:0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				filter: alpha(opacity=0);
+		}
+
+		.member .overlay {
+			left:0;
+			top:0;
+			bottom:0;
+			right:0;
+			background:black;
+			border-radius:50%;
+			z-index:2;
+			opacity:0.4;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+				filter: alpha(opacity=40);
+		}
+
+		.member .name {
+			color:#777;
+			text-transform:uppercase;
+			font-size:16px;
+		}
+
+		.member .position {
+			color:#999;
+			font-style:italic;
+			top:35px;
+			font-size:13px;
+			transition-delay:0.1s;
+			-webkit-transition-delay:0.1s;
+			-moz-transition-delay:0.1s;
+		}
+
+		.member .info {
+			color:#777;
+			top:65px;
+			font-size:13px;
+			font-family:'Oxygen', sans-serif;
+			transition-delay:0.2s;
+			-webkit-transition-delay:0.2s;
+			-moz-transition-delay:0.2s;
+		}
+
+		.member .social {
+			top:200px;
+			transition-delay:0.3s;
+			-webkit-transition-delay:0.3s;
+			-moz-transition-delay:0.3s;
+		}
+
+		.member .social {
+			margin:0;
+			padding:0;
+		}
+
+		.member .social li {
+			list-style:none;
+			float:left;
+		}
+
+		.member .social li:first-child a {
+			padding-left:0;
+		}
+
+		.member .social li a {
+			display:block;
+			padding:0 5px;
+			font-family:'Social';
+			color:#777;
+			text-decoration:none;
+			font-size:24px;
+		}
+
+		.member:hover .position,
+		.member:hover .info,
+		.member:hover .social,
+		.member:hover .name {
+			opacity:1;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+				filter: alpha(opacity=100);
+			left:280px;
+		}
+
+		.member:hover .overlay {
+			opacity:0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				filter: alpha(opacity=0);
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="member">
+		<div class="overlay"></div>
+		<p class="name">Alexander Laing.</p>
+		<p class="position">Web Developer</p>
+		<p class="info">Lorem ipsum dolor sit amet consecetur adipiscing sit elit. Lorem ipsum dolor sit amet consecetur adipiscing sit elit. Lorem ipsum dolor sit amet consecetur adipiscing sit elit. Lorem ipsum dolor sit amet consecetur adipiscing sit elit.</p>
+		<img src="face.jpg" />
+		<ul class="social">
+            <li><a href="#">F</a></li>
+            <li><a href="#">T</a></li>
+            <li><a href="#">U</a></li>
+            <li><a href="#">X</a></li>
+        </ul>
+	</div>
+</body>
+
+</html>
